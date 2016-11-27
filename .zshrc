@@ -93,6 +93,9 @@ alias ll="ls -l"
 alias closekeyboard="sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
 alias openkeyboard="sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
 alias zshrestart="source ~/.zsh_profile"
+alias gitlog="git log --graph --pretty=oneline --abbrev-commit"
+
+
 
 # mysql
 
