@@ -102,3 +102,10 @@ alias gitlg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)
 export PATH="/usr/local/mysql/bin:$PATH"
 
 # mysql
+
+# tomcat
+
+export PATH="/Library/Tomcat/bin:$PATH"
+
+# tomcat
+
