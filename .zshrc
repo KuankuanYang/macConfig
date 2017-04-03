@@ -51,7 +51,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump osx)
+plugins=(git autojump osx zsh-syntax-highlighting)
 
 # Add autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
@@ -73,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
+# Compilation
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
@@ -85,27 +85,42 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="emacs -nw ~/.zshrc"
-alias ohmyzsh="emacs -nw ~/.oh-my-zsh"
-alias mc="emacs -nw"
+alias en="emacs"
+alias et="emacs -nw"
+alias ec="emacsclient"
+alias es="emacs --daemon"
+#alias zshconfig="emacs -nw ~/.zshrc"
+#alias ohmyzsh="emacs -nw ~/.oh-my-zsh"
+alias rezsh="source ~/.zshrc"
+alias zshconfig="ec ~/.zshrc"
+alias ohmyzsh="ec ~/.oh-my-zsh"
 alias cls="clear"
 alias ll="ls -l"
 alias closekeyboard="sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
 alias openkeyboard="sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
-alias zshrestart="source ~/.zsh_profile"
+alias zshrestart="source ~/.zshrc"
 alias gitlg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias showhidefile="defaults write com.apple.finder AppleShowAllFiles -bool true;
+KillAll Finder"
+alias hidefile="defaults write com.apple.finder AppleShowAllFiles -bool false;
+KillAll Finder"
 
 
 
 # mysql
-
 export PATH="/usr/local/mysql/bin:$PATH"
 
-# mysql
-
 # tomcat
-
 export PATH="/Library/Tomcat/bin:$PATH"
 
-# tomcat
-
+# Java
+#JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/"
+#export JAVA_HOME
+#CLASS_PATH="$JAVA_HOME/lib"
+#PATH=".$PATH:$JAVA_HOME/bin"
+#CLASSPATH=".:/Users/Ykk/Java:$JAVA_HOME/lib"
+#CLASSPATH="/Users/Ykk/Java"
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PATH=${JAVA_HOME}/bin:$PATH
+export CLASSPATH=.:/Users/Ykk/Java/lib:${JAVA_HOME}/lib
